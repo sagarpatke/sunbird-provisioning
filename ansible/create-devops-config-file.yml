@@ -1,6 +1,31 @@
 ---
-- hosts: localhost
+- hosts: sunbird-db
   tasks:
+    - name: Fetch token files
+      fetch:
+        src: "~/{{ item }}"
+        dest: "{{ item }}"
+        flat: yes
+      with_items:
+        - jwt_token_player.txt
+        - badger_token.txt
+      ignore_errors: yes
+
+- hosts: localhost
+  vars:
+    badger_token: ""
+    sunbird_token: ""
+  tasks:
+    - name: Set Facts
+      set_fact:
+        sunbird_token: "{{ lookup('file', 'jwt_token_player.txt') | replace(' ', '')}}"
+        badger_token: "{{ lookup('file', 'badger_token.txt') | from_json | json_query('token')}}"
+      ignore_errors: yes
+      
+    - debug:
+        msg: 
+          badger_token: "{{ badger_token }}"
+          sunbird_token: "{{ sunbird_token }}"
     - name: Create DevOps config file
       template:
         src: config

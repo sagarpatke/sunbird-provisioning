@@ -5,7 +5,7 @@
     - name: Install python
       raw: sudo apt-get install -y python
 
-- hosts: sunbird-master
+- hosts: sunbird-db
   tasks:
     - name: Copy SSH Key
       copy:

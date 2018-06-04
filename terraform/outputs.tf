@@ -21,15 +21,27 @@ data "azurerm_storage_account" "sunbird-storage" {
   resource_group_name = "${azurerm_resource_group.sunbird.name}"
 }
 
-output "sunbird_master_host" {
+output "sunbird_master_host_private_ip" {
+  value = "${data.aws_instance.sunbird-docker-master.0.private_ip}"
+}
+
+output "sunbird_master_host_public_dns" {
   value = "${data.aws_instance.sunbird-docker-master.0.public_dns}"
 }
 
-output "sunbird_db_host" {
+output "sunbird_db_host_private_ip" {
+  value = "${aws_instance.sunbird-db.private_ip}"
+}
+
+output "sunbird_db_host_public_dns" {
   value = "${aws_instance.sunbird-db.public_dns}"
 }
 
-output "sunbird_auth_host" {
+output "sunbird_auth_host_private_ip" {
+  value = "${data.aws_instance.sunbird-auth.0.private_ip}"
+}
+
+output "sunbird_auth_host_public_dns" {
   value = "${data.aws_instance.sunbird-auth.0.public_dns}"
 }
 

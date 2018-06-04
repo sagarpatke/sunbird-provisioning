@@ -1,0 +1,9 @@
+---
+- hosts: sunbird-db
+  tasks:
+    - name: Copy config file
+      copy:
+        src: config
+        dest: ~/sunbird-devops/deploy/config
+    - name: Install Sunbird Core Services
+      raw: cd ~/sunbird-devops/deploy && /bin/bash -c "./sunbird_install.sh -s core"

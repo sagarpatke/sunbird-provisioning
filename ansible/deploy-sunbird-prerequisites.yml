@@ -1,5 +1,5 @@
 ---
-- hosts: sunbird-master
+- hosts: sunbird-db
   tasks:
     - name: Clone Git Repository
       git:
@@ -11,5 +11,5 @@
       copy:
         src: config
         dest: ~/sunbird-devops/deploy/config
-    - name: Install stages 1-6
+    - name: Install Sunbird Prerequisites
       raw: cd ~/sunbird-devops/deploy && /bin/bash -c ./sunbird_install.sh
