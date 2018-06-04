@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Generating hosts file
+      template:
+        src: hosts
+        dest: ./hosts

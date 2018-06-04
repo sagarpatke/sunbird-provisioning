@@ -1,0 +1,21 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install python
+      raw: sudo apt-get install -y python
+
+- hosts: sunbird-master
+  tasks:
+    - name: Copy SSH Key
+      copy:
+        src: ../keys/master
+        dest: ~/.ssh/id_rsa
+        mode: 0600
+
+- hosts: all
+  tasks:
+    - name: Copy SSH Public Key of Sunbird DB into other servers
+      authorized_key:
+        user: ubuntu
+        key: "{{ lookup('file', '../keys/master.pub') }}"

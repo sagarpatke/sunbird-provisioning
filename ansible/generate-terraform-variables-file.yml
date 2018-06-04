@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars:
+    implementation_name: sunbird
+    region: ap-south-1
+    public_key: "{{ lookup('file', '../keys/remote.pub') }}"
+    instance_size: t2.medium
+  tasks:
+    - name: Creating variables for terraform
+      template:
+        src: variables.auto.tfvars
+        dest: ../terraform/variables.auto.tfvars

@@ -1,0 +1,15 @@
+---
+- hosts: sunbird-master
+  tasks:
+    - name: Clone Git Repository
+      git:
+        repo: https://github.com/sagarpatke/sunbird-devops.git
+        dest: ~/sunbird-devops
+        version: sunbird-provisioning-aws
+      ignore_errors: yes
+    - name: Copy config file
+      copy:
+        src: config
+        dest: ~/sunbird-devops/deploy/config
+    - name: Install stages 1-6
+      raw: cd ~/sunbird-devops/deploy && /bin/bash -c ./sunbird_install.sh

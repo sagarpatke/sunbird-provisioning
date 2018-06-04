@@ -1,0 +1,3 @@
+sunbird-master ansible_user=ubuntu ansible_host={{sunbird_master_host}}
+sunbird-db ansible_user=ubuntu ansible_host={{sunbird_db_host}}
+sunbird-auth ansible_user=ubuntu ansible_host={{sunbird_auth_host}}

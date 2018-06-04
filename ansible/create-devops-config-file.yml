@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create DevOps config file
+      template:
+        src: config
+        dest: config

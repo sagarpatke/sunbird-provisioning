@@ -1,8 +1,10 @@
 resource "aws_instance" "sunbird-db" {
-  instance_type = "t2.micro"
+  instance_type = "${var.db_instance_type}"
   ami = "${data.aws_ami.ubuntu.id}"
   key_name = "${aws_key_pair.sunbird.key_name}"
-  security_groups = ["${aws_security_group.sunbird-private.id}"]
+
+  /* Using security_groups instead of vpc_security_group_ids forces a new instance everytime. */
+  vpc_security_group_ids = ["${aws_security_group.sunbird-private.id}"]
   subnet_id = "${aws_subnet.sunbird-public.id}"
 
   root_block_device {
