@@ -1,6 +1,6 @@
 # sunbird-provisioning
 
-This repository provides the necessary script to easily provision infrastructure and deploy sunbird on AWS, with Azure backed storage. Just configure AWS Credentials, login to Azure using Azure CLI, set a few configuration parameters and execute the script. This should deploy a sunbird instance, and provide you with details to access sunbird.
+This repository provides the necessary scripts to easily provision infrastructure and deploy sunbird on AWS, with Azure backed storage. Just configure AWS Credentials, login to Azure using Azure CLI, set a few configuration parameters and execute the script. This should deploy a sunbird instance, and provide you with details to access sunbird.
 
 > Note: WIP: Due to some issues with sunbird's DevOps scripts, the process is unable to complete. We are working with the Sunbird team to resolve this issue
 
