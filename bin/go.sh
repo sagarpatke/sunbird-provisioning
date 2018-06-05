@@ -9,6 +9,7 @@ cd $(dirname $0)
 ./generate-hosts-file.sh
 ./copy-master-ssh-keys.sh
 ./create-devops-config-file.sh
+./configure-ssl.sh
 ./deploy-sunbird-prerequisites.sh # Install until badger setup
 ./create-devops-config-file.sh # Create config again, to include Sunbird Auth Token, and Badger Token generated from previous script
 ./deploy-sunbird-core.sh

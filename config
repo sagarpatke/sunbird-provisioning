@@ -1,6 +1,6 @@
 ---
-implementation_name: stackroute
+implementation_name: example
 region: ap-south-1
 sunbird_environment: staging
-ekstep_jwt_token: "{{ lookup('env', 'EKSTEP_JWT_TOKEN') }}"
+domain_name: sunbird.example.com
 email: admin@example.com

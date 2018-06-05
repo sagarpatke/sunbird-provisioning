@@ -1,0 +1,21 @@
+---
+- hosts: sunbird-master
+  tasks:
+    - name: Clone Git Repository
+      git:
+        repo: https://github.com/sagarpatke/sunbird-devops.git
+        dest: ~/sunbird-devops
+        version: sunbird-provisioning-aws
+      ignore_errors: yes
+    # - name: Execute certbot.sh script
+    #   raw: cd ~/sunbird-devops/deploy && /bin/bash -c "echo {{domain_name}} | ./certbot.sh"
+
+# - hosts: sunbird-master
+#   become: true
+#   roles:
+#     - role: geerlingguy.certbot
+#       certbot_admin_email: "{{ email }}"
+#       certbot_create_if_missing: yes
+#       certbot_certs:
+#         - domains:
+#           - {{ domain_name }}

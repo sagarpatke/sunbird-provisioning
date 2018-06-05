@@ -1,3 +1,0 @@
-sunbird-master ansible_user=ubuntu ansible_host=ec2-13-232-97-117.ap-south-1.compute.amazonaws.com
-sunbird-db ansible_user=ubuntu ansible_host=ec2-35-154-228-47.ap-south-1.compute.amazonaws.com
-sunbird-auth ansible_user=ubuntu ansible_host=ec2-13-232-90-154.ap-south-1.compute.amazonaws.com

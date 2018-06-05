@@ -13,4 +13,6 @@ variable "db_instance_type" {
   default = "t2.medium"
 }
 
-variable "sunbird_environment" {  }
+variable "sunbird_environment" { }
+
+variable "domain_name" { }
