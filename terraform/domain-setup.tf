@@ -26,4 +26,6 @@ resource "godaddy_domain_record" "sunbird-domain" {
 
   nameservers = ["ns49.domaincontrol.com", "ns50.domaincontrol.com"]
 }
+
+variable "domain_name" { }
 */

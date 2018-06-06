@@ -14,5 +14,3 @@ variable "db_instance_type" {
 }
 
 variable "sunbird_environment" { }
-
-variable "domain_name" { }
