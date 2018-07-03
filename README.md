@@ -2,8 +2,6 @@
 
 This repository provides the necessary scripts to easily provision infrastructure and deploy sunbird on AWS, with Azure backed storage. Just configure AWS Credentials, login to Azure using Azure CLI, set a few configuration parameters and execute the script. This should deploy a sunbird instance, and provide you with details to access sunbird.
 
-> Note: WIP: Due to some issues with sunbird's DevOps scripts, the process is unable to complete. We are working with the Sunbird team to resolve this issue
-
 # Prerequisites
 1. Linux / Mac
 1. Install [Terraform](https://www.terraform.io/intro/getting-started/install.html), [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html), and [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
