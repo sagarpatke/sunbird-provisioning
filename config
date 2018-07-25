@@ -2,5 +2,5 @@
 implementation_name: example
 region: ap-south-1
 sunbird_environment: staging
-domain_name: sunbird.example.com
+domain_name:
 email: admin@example.com
