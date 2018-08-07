@@ -43,7 +43,7 @@ postgres_master_host:
 postgres_slave_host: 
 swarm_manager_host: 
 swarm_node_host: 
-keycloak_host: 
+keycloak_host: {{sunbird_auth_host_public_dns}}
 log_es_host: 
 
 prometheus_host:
