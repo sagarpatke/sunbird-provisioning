@@ -24,7 +24,7 @@ backup_storage_key: sunbird-backup
 badger_admin_password: secretive_bob
 badger_admin_email: {{email}}
 
-ekstep_api_base_url: {{ (sunbird_environment == 'production') | ternary('https://api.ekstep.in', 'https://api-qa.ekstep.in/api') }}
+ekstep_api_base_url: {{ (sunbird_environment == 'production') | ternary('https://api.ekstep.in', 'https://api-qa.ekstep.in') }}
 ekstep_proxy_base_url: {{ (sunbird_environment == 'production') | ternary('https://community.ekstep.in', 'https://qa.ekstep.in') }}
 
 ekstep_api_key: {{ ekstep_jwt_token | default(lookup('env', 'EKSTEP_JWT_TOKEN')) }}
@@ -35,7 +35,7 @@ sunbird_azure_storage_account: {{azure_storage_account_name}}
 
 sunbird_sso_publickey:
 
-sunbird_default_channel: {{sunbird_environment}}
+sunbird_default_channel:
 
 elasticsearch_host: 
 cassandra_host: 

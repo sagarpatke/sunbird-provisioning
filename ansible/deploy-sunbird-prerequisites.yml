@@ -5,7 +5,7 @@
       git:
         repo: https://github.com/sagarpatke/sunbird-devops.git
         dest: ~/sunbird-devops
-        version: provisioning-1.8
+        version: provisioning-1.8.2
       ignore_errors: yes
     - name: Copy config file
       copy:
